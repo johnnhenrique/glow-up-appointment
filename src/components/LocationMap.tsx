@@ -20,7 +20,7 @@ const LocationMap = () => {
           <div className="lg:col-span-2">
             <div className="rounded-lg overflow-hidden shadow-lg h-[450px]">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.098173137262!2d-46.6522538!3d-23.5647888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1653497594188!5m2!1spt-BR!2sbr" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3832.181983259399!2d-48.0596931!3d-16.0105899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93598075bc0f08a7%3A0xf5fbb9c591d62c68!2sRossi%20Speciale!5e0!3m2!1spt-BR!2sbr!4v1716136422916!5m2!1spt-BR!2sbr" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -45,9 +45,9 @@ const LocationMap = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Endereço</h4>
-                  <p className="text-gray-600">Av. Paulista, 1000</p>
-                  <p className="text-gray-600">Bela Vista, São Paulo - SP</p>
-                  <p className="text-gray-600">CEP: 01310-100</p>
+                  <p className="text-gray-600">QI 03, Lotes 620/640, St. Industrial do Gama</p>
+                  <p className="text-gray-600">Gama, Distrito Federal - DF</p>
+                  <p className="text-gray-600">CEP: 72445-030</p>
                 </div>
               </div>
 
@@ -59,8 +59,7 @@ const LocationMap = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Telefone</h4>
-                  <p className="text-gray-600">(11) 99999-9999</p>
-                  <p className="text-gray-600">(11) 3333-3333</p>
+                  <p className="text-gray-600">(61) 99119-5557</p>
                 </div>
               </div>
 

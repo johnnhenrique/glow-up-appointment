@@ -7,24 +7,25 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: 'Ana Paula Silva',
-    photo: 'https://randomuser.me/api/portraits/women/32.jpg',
+    name: 'Ricardo Abreu',
+    photo: './images/ricardo.jpg',
     testimonial: 'Os tratamentos faciais superaram minhas expectativas. Minha pele está radiante e rejuvenescida, muito obrigada à equipe da clínica!',
     stars: 5,
     treatment: 'Radiofrequência Facial'
   },
   {
-    id: 2,
-    name: 'Roberto Mendes',
-    photo: 'https://randomuser.me/api/portraits/men/45.jpg',
-    testimonial: 'Excelente atendimento e profissionais extremamente capacitados. Os resultados do tratamento a laser foram visíveis desde a primeira sessão.',
-    stars: 5,
-    treatment: 'Depilação a Laser'
-  },
+  id: 2,
+  name: 'Thaisa Gorniak',
+  photo: './images/thaisa.jpg',
+  testimonial: 'Excelente atendimento e profissionais extremamente capacitados. Os resultados do tratamento a laser foram visíveis desde a primeira sessão.',
+  stars: 5,
+  treatment: 'Depilação a Laser'
+}
+,
   {
     id: 3,
-    name: 'Carla Magalhães',
-    photo: 'https://randomuser.me/api/portraits/women/68.jpg',
+    name: 'Paula Sampaio',
+    photo: './images/paula.jpg',
     testimonial: 'Adoro o ambiente da clínica, sempre limpo e aconchegante. Os tratamentos corporais me ajudaram a recuperar minha autoestima.',
     stars: 4,
     treatment: 'Massagem Modeladora'

@@ -53,7 +53,7 @@ const Hero = () => {
                   fill="currentColor"
                 />
               </svg>
-              Agende sua consulta
+              Agende sua avaliação!
             </Button>
             <button 
               onClick={() => {

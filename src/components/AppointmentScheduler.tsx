@@ -6,7 +6,7 @@ import { PhoneCall, MessageSquare, Calendar, Clock } from 'lucide-react';
 const AppointmentScheduler = () => {
   const handleWhatsAppScheduling = () => {
     const message = encodeURIComponent("Olá, gostaria de agendar um procedimento estético. Poderia me ajudar?");
-    const whatsappUrl = `https://wa.me/5511999999999?text=${message}`;
+    const whatsappUrl = `https://wa.me/5561991195557?text=${message}`;
     window.open(whatsappUrl, "_blank");
   };
 
