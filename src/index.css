@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
+    --background: 43 77% 97%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -15,10 +15,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 199 89% 69%;
+    --primary: 45 68% 52%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 180 100% 91%;
+    --secondary: 42 80% 95%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -139,5 +139,9 @@
   
   .body-md {
     @apply text-sm md:text-base;
+  }
+
+  .rose-gradient {
+    @apply bg-gradient-to-r from-clinic-rose/20 to-clinic-primary/20;
   }
 }

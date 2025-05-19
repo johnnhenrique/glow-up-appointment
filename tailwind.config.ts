@@ -64,11 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
                 clinic: {
-                    primary: "#5FBDFF",
-                    secondary: "#C5FFF8",
+                    primary: "#D4AF37", // Dourado Metálico (replacing blue)
+                    secondary: "#FEF9E7", // Versão clara de dourado metálico
                     accent: "#F4D3D3",
-                    light: "#F8F6F4",
-                    dark: "#1A1A1A"
+                    light: "#FDF2E9", // Tom claro para fundo
+                    dark: "#1A1A1A",
+                    rose: "#C48F9C" // Rosé Metálico
                 }
 			},
 			borderRadius: {

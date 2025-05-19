@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="relative h-screen flex items-center">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-clinic-primary/20 to-clinic-secondary/20 z-0"></div>
+      <div className="absolute inset-0 rose-gradient z-0"></div>
       <div 
         className="absolute inset-0 bg-cover bg-center z-[-1]"
         style={{
@@ -19,7 +19,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container-custom relative z-10">
         <div className="max-w-2xl animate-fade-in">
-          <span className="inline-block bg-clinic-primary text-white px-4 py-1 rounded-full text-sm mb-4 font-medium">
+          <span className="inline-block bg-clinic-rose text-white px-4 py-1 rounded-full text-sm mb-4 font-medium">
             Transforme sua beleza
           </span>
           <h1 className="heading-xl text-clinic-dark mb-6 leading-tight">
@@ -32,13 +32,17 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-4">
             <Link to="/agendar">
-              <Button className="btn-primary w-full sm:w-auto">Agende sua consulta</Button>
+              <Button className="btn-primary bg-clinic-rose hover:bg-clinic-rose/90 text-white w-full sm:w-auto">Agende sua consulta</Button>
             </Link>
-            <Link to="/servicos">
-              <Button variant="outline" className="w-full sm:w-auto border-clinic-primary text-clinic-primary hover:bg-clinic-primary hover:text-white">
-                Conheça nossos serviços
-              </Button>
-            </Link>
+            <button 
+              onClick={() => {
+                const element = document.getElementById('servicos');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="w-full sm:w-auto border-clinic-rose text-clinic-rose hover:bg-clinic-rose hover:text-white py-3 px-6 rounded-md border transition-all font-medium"
+            >
+              Conheça nossos serviços
+            </button>
           </div>
         </div>
       </div>

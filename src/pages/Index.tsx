@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
@@ -7,14 +7,12 @@ import Pricing from '@/components/Pricing';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
-import LoginModal from '@/components/LoginModal';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import AboutMe from '@/components/AboutMe';
+import LocationMap from '@/components/LocationMap';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 
 const Index = () => {
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -25,8 +23,11 @@ const Index = () => {
       {/* Services Section */}
       <Services />
       
+      {/* About Me Section */}
+      <AboutMe />
+      
       {/* Call to Action Section */}
-      <section className="relative py-20 bg-clinic-primary text-white">
+      <section className="relative py-20 bg-clinic-rose text-white">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="heading-lg mb-6">Transforme sua beleza hoje mesmo</h2>
@@ -35,18 +36,16 @@ const Index = () => {
               podem realçar sua beleza natural.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/agendar">
-                <Button variant="secondary" size="lg" className="bg-white text-clinic-primary hover:bg-gray-100">
-                  Agendar avaliação gratuita
-                </Button>
-              </Link>
               <Button 
-                variant="outline" 
+                variant="secondary" 
                 size="lg" 
-                className="border-white text-white hover:bg-white hover:text-clinic-primary"
-                onClick={() => setIsLoginModalOpen(true)}
+                className="bg-clinic-primary text-white hover:bg-clinic-primary/90"
+                onClick={() => {
+                  const element = document.getElementById('agendar');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
-                Área do Cliente
+                Agendar avaliação gratuita
               </Button>
             </div>
           </div>
@@ -61,6 +60,9 @@ const Index = () => {
       
       {/* FAQ Section */}
       <FAQ />
+
+      {/* Location/Map Section */}
+      <LocationMap />
       
       {/* Pre-footer CTA */}
       <section className="section-padding bg-clinic-secondary/20">
@@ -71,20 +73,22 @@ const Index = () => {
               Agende seu procedimento agora mesmo e dê o primeiro passo para realçar sua 
               beleza natural com nossa equipe especializada.
             </p>
-            <Link to="/agendar">
-              <Button size="lg" className="bg-clinic-primary hover:bg-clinic-primary/90 text-white px-8">
-                Agendar Agora
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              className="bg-clinic-rose hover:bg-clinic-rose/90 text-white px-8"
+              onClick={() => {
+                const element = document.getElementById('agendar');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Agendar Agora
+            </Button>
           </div>
         </div>
       </section>
       
       {/* Footer */}
       <Footer />
-      
-      {/* Login Modal */}
-      <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} />
       
       {/* WhatsApp Button */}
       <WhatsAppButton />
