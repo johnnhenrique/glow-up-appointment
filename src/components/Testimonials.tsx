@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
@@ -11,24 +10,23 @@ const testimonials = [
     photo: './images/ricardo.jpg',
     testimonial: 'Os tratamentos faciais superaram minhas expectativas. Minha pele está radiante e rejuvenescida, muito obrigada à equipe da clínica!',
     stars: 5,
-    treatment: 'Radiofrequência Facial'
+    treatment: 'Limpeza de Pele'
   },
   {
-  id: 2,
-  name: 'Thaisa Gorniak',
-  photo: './images/thaisa.jpg',
-  testimonial: 'Excelente atendimento e profissionais extremamente capacitados. Os resultados do tratamento a laser foram visíveis desde a primeira sessão.',
-  stars: 5,
-  treatment: 'Depilação a Laser'
-}
-,
+    id: 2,
+    name: 'Thaisa Gorniak',
+    photo: './images/thaisa.jpg',
+    testimonial: 'Excelente atendimento e profissionais extremamente capacitados. Os resultados do tratamento a laser foram visíveis desde a primeira sessão.',
+    stars: 5,
+    treatment: 'Skin Booster'
+  },
   {
     id: 3,
     name: 'Paula Sampaio',
     photo: './images/paula.jpg',
     testimonial: 'Adoro o ambiente da clínica, sempre limpo e aconchegante. Os tratamentos corporais me ajudaram a recuperar minha autoestima.',
-    stars: 4,
-    treatment: 'Massagem Modeladora'
+    stars: 5,
+    treatment: 'Microagulhamento'
   },
   {
     id: 4,
@@ -50,16 +48,28 @@ const testimonials = [
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  
+  const [animate, setAnimate] = useState(false);
+
   const nextTestimonial = () => {
-    setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-  };
-  
-  const prevTestimonial = () => {
-    setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+    setAnimate(false);
+    setTimeout(() => {
+      setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+      setAnimate(true);
+    }, 50);
   };
 
-  // Calculate visible testimonials with 1 on mobile, 3 on desktop
+  const prevTestimonial = () => {
+    setAnimate(false);
+    setTimeout(() => {
+      setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+      setAnimate(true);
+    }, 50);
+  };
+
+  useEffect(() => {
+    setAnimate(true);
+  }, [activeIndex]);
+
   const visibleTestimonials = () => {
     const isMobile = window.innerWidth < 768;
     if (isMobile) {
@@ -89,7 +99,7 @@ const Testimonials = () => {
         </div>
 
         <div className="relative">
-          <div className="flex flex-wrap md:flex-nowrap gap-6 justify-center">
+          <div className={`flex flex-wrap md:flex-nowrap gap-6 justify-center ${animate && 'animate-fade-slide'}`}>
             {visibleTestimonials().map((testimonial) => (
               <Card key={testimonial.id} className="w-full md:w-1/3 border-none shadow-lg">
                 <CardContent className="p-6">
@@ -138,7 +148,13 @@ const Testimonials = () => {
                 variant="outline"
                 size="sm"
                 className={`w-2 h-2 p-0 rounded-full ${index === activeIndex ? 'bg-clinic-primary border-clinic-primary' : 'bg-gray-200'}`}
-                onClick={() => setActiveIndex(index)}
+                onClick={() => {
+                  setAnimate(false);
+                  setTimeout(() => {
+                    setActiveIndex(index);
+                    setAnimate(true);
+                  }, 50);
+                }}
               />
             ))}
             

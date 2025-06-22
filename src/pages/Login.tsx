@@ -78,7 +78,7 @@ const Login = () => {
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="register-phone">Telefone</Label>
-                        <Input id="register-phone" type="tel" placeholder="(11) 99999-9999" required />
+                        <Input id="register-phone" type="tel" placeholder="(61) 99119-5557" required />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="register-password">Senha</Label>

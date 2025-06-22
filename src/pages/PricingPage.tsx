@@ -151,7 +151,7 @@ const PricingPage = () => {
                   </div>
                 </div>
                 <p className="text-gray-600">
-                  Aceitamos parcelamento em até 12x nos cartões de crédito.
+                  Aceitamos parcelamento em até 4x nos cartões de crédito.
                   Entre em contato para mais informações sobre descontos e condições especiais.
                 </p>
               </div>

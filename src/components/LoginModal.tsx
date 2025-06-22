@@ -86,7 +86,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="register-phone">Telefone</Label>
-                  <Input id="register-phone" type="tel" placeholder="(11) 99999-9999" required />
+                  <Input id="register-phone" type="tel" placeholder="(61) 561991195557" required />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="register-password">Senha</Label>

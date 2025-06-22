@@ -1,42 +1,52 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   const handleWhatsAppScheduling = () => {
     const message = encodeURIComponent("Olá, gostaria de agendar um procedimento estético. Poderia me ajudar?");
-    const whatsappUrl = `https://wa.me/5511999999999?text=${message}`;
+    const whatsappUrl = `https://wa.me/5561991195557?text=${message}`;
     window.open(whatsappUrl, "_blank");
   };
 
   return (
     <section className="relative h-screen flex items-center">
+      {/* Logomarca no canto superior esquerdo */}
+      <div className="absolute top-5 left-40 z-20">
+        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-4 border-clinic-rose shadow-lg">
+          <img 
+            src="https://www.casejp.com/galeria/sua-logo-marca-11.png" //* Imagem da Logomarca aqui *//
+            alt="Profissional Estética"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
       {/* Background */}
       <div className="absolute inset-0 rose-gradient z-0"></div>
       <div 
-        className="absolute inset-0 bg-cover bg-center z-[-1]"
+        className="absolute inset-0 bg-cover bg-center z-[-1] animate-background-move"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1770&auto=format&fit=crop')",
-          opacity: 0.8
+          backgroundImage: "url('https://dd4bd26191.cbaul-cdnwnd.com/f427d44f730c4c14b502a22ce7d34ff9/200000045-7637777303/bg-banner-corpo-sa-estetica-1.jpg?ph=dd4bd26191')",
+          opacity: 0.8,
+          backgroundSize: '103% 103%' 
         }}
       ></div>
-      
+
       {/* Content */}
       <div className="container-custom relative z-10">
         <div className="max-w-2xl animate-fade-in">
-          <span className="inline-block bg-clinic-rose text-white px-4 py-1 rounded-full text-sm mb-4 font-medium">
+          <span className="inline-block bg-clinic-rose text-white px-3 py-3 rounded-full text-sm mb-3 font-medium">
             Transforme sua beleza
           </span>
           <h1 className="heading-xl text-clinic-dark mb-6 leading-tight">
             Desperte Sua Beleza Natural com Nossos Tratamentos Exclusivos
           </h1>
-          <p className="body-lg text-gray-700 mb-8 max-w-xl">
+          <p className="body-lg text-gray-700 mb-5 max-w-xl">
             Oferecemos tratamentos estéticos inovadores e personalizados que realçam sua beleza natural. 
-            Nossos especialistas estão prontos para cuidar de você.
+            Estou pronta para cuidar de você.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-8">
             <Button 
               onClick={handleWhatsAppScheduling}
               className="btn-primary bg-clinic-rose hover:bg-clinic-rose/90 text-white w-full sm:w-auto flex items-center gap-2"
@@ -62,7 +72,7 @@ const Hero = () => {
               }}
               className="w-full sm:w-auto border-clinic-rose text-clinic-rose hover:bg-clinic-rose hover:text-white py-3 px-6 rounded-md border transition-all font-medium"
             >
-              Conheça nossos serviços
+              Conheça nossos serviços!
             </button>
           </div>
         </div>

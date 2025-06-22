@@ -23,7 +23,7 @@ const serviceCategories = [
     id: 3,
     title: 'Tratamentos a Laser',
     description: 'Tecnologia avançada para resultados precisos e duradouros',
-    image: 'https://images.unsplash.com/photo-1598887141924-4d0528b6ebc3?q=80&w=1770&auto=format&fit=crop',
+    image: 'https://www.corpobueno.com.br/wp-content/uploads/2022/12/Laser-Venus-2.jpg',
     link: '/servicos/laser'
   },
   {

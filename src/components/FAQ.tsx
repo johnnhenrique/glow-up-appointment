@@ -21,7 +21,7 @@ const faqItems = [
   },
   {
     question: "Quais formas de pagamento são aceitas?",
-    answer: "Aceitamos dinheiro, cartões de crédito e débito, Pix, e também oferecemos parcelamento em até 12x nos cartões de crédito. Temos ainda pacotes promocionais com descontos especiais."
+    answer: "Aceitamos dinheiro, cartões de crédito e débito, Pix, e também oferecemos parcelamento em até 4x nos cartões de crédito. Temos ainda pacotes promocionais com descontos especiais."
   },
   {
     question: "Como devo me preparar para os procedimentos?",

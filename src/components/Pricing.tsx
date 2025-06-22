@@ -8,12 +8,12 @@ import { Link } from 'react-router-dom';
 // Mock price data
 const pricingData = {
   faciais: [
-    { id: 1, name: 'Limpeza de Pele Profunda', price: '180,00', highlight: false },
+    { id: 1, name: 'Limpeza de Pele Especializada', price: '150,00', highlight: true },
     { id: 2, name: 'Radiofrequência Facial', price: '250,00', highlight: false },
-    { id: 3, name: 'Peeling Químico', price: '220,00', highlight: false },
-    { id: 4, name: 'Hidratação Facial Premium', price: '150,00', highlight: false },
-    { id: 5, name: 'Microagulhamento', price: '380,00', highlight: true },
-    { id: 6, name: 'Toxina Botulínica', price: '650,00', highlight: false },
+    { id: 3, name: 'Peeling Químico', price: '150,00', highlight: false },
+    { id: 4, name: 'Skin Booster', price: '300,00', highlight: true },
+    { id: 5, name: 'Microagulhamento', price: '300,00', highlight: true },
+    { id: 6, name: 'Toxina Botulínica', price: '850,00', highlight: false },
   ],
   corporais: [
     { id: 1, name: 'Drenagem Linfática', price: '180,00', highlight: false },
@@ -83,7 +83,7 @@ const Pricing = () => {
                           {item.name}
                           {item.highlight && (
                             <span className="ml-2 bg-clinic-primary text-white text-xs px-2 py-1 rounded-full">
-                              Destaque
+                              Em promoção
                             </span>
                           )}
                         </TableCell>

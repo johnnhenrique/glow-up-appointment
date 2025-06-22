@@ -32,7 +32,7 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="heading-lg mb-6">Transforme sua beleza hoje mesmo</h2>
             <p className="body-lg mb-8">
-              Agende uma avaliação gratuita e descubra como nossos tratamentos personalizados 
+              Agende uma avaliação e descubra como nossos tratamentos personalizados 
               podem realçar sua beleza natural.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -45,7 +45,7 @@ const Index = () => {
                   element?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Agendar avaliação gratuita
+                Agendar avaliação!
               </Button>
             </div>
           </div>
@@ -68,7 +68,7 @@ const Index = () => {
       <section className="section-padding bg-clinic-secondary/20">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="heading-lg mb-6">Pronto para começar sua jornada?</h2>
+            <h2 className="heading-lg mb-6">Pronto para começar a realçar sua beleza?</h2>
             <p className="body-lg mb-8 text-gray-700">
               Agende seu procedimento agora mesmo e dê o primeiro passo para realçar sua 
               beleza natural com nossa equipe especializada.
